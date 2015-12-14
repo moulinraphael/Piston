@@ -1,0 +1,15 @@
+AuthType Basic
+AuthName "Gestion Piston Ski Club - Identification"
+AuthUserFile /Users/vistuo/www/ECL/piston/.htpasswd
+Require valid-user
+
+Options -Indexes  +FollowSymLinks -MultiViews
+IndexIgnore */*
+RewriteEngine on
+RewriteBase /ECL/piston/
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
+

@@ -1,0 +1,494 @@
+/* *********************************************************/
+/* Produit Piston : Gestion Matos et Membres ***************/
+/* Créé par Raphaël Kichot' MOULIN *************************/
+/* raphael.moulin@ecl13.ec-lyon.fr *************************/
+/* *********************************************************/
+/* assets/css/piston.css ***********************************/
+/* *********************************************************/
+/* Dernière modification : le 09/11/14 *********************/
+/* *********************************************************/
+
+header {
+	top:0px;
+	display:block;
+	width:100%;
+	background:#000;
+	color:white;
+	height:45px;
+	line-height: 45px;
+	vertical-align: middle;
+	padding:0px 10px;
+	font-size:1.75em;
+	padding-left:40px;
+	overflow:hidden;
+	font-variant: small-caps;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header small {
+	margin-left: 30px;
+	color:#69D;
+	font-size:60%;
+	line-height: 45px;
+	vertical-align: middle;
+}
+
+header form {
+	float:right;
+	font-size:1em;
+}
+
+header select,
+header input[type=submit] {
+	vertical-align: 3px;
+	font-size:0.5em;
+	padding:5px;
+}
+header input[type=submit] {
+	width:70px;
+}
+
+nav {
+	width:100%;
+	background: #14A;
+	padding:0px;
+	height:37px;
+}
+
+nav ul li {
+	font-size:1em;
+	display:inline-block;
+	width:150px;
+	background:#47B;
+	color:#FFF;
+	line-height: 35px;
+	border:1px solid #000;
+	text-align: center;
+	overflow: hidden;
+	margin-left:-1px;
+}
+
+nav ul > li:last-child {
+	float:right;
+}
+
+nav ul li:hover {
+	background:#FFF;
+	color:#000;
+}
+
+nav ul li:hover > span,
+nav ul li:hover > a {
+	font-weight: bold;
+	color:#000;
+}
+
+nav ul li > a {
+	color:#FFF;
+	display:block;
+	line-height: 35px;
+	text-decoration: none;
+}
+
+nav ul li > a:hover {
+	text-decoration: underline;
+}
+
+nav ul li ul {
+	display:none;
+}
+
+nav ul li ul li {
+	display:inherit;
+	margin-left: -1px;
+	margin-bottom:-1px;
+	color:#FFF;
+}
+
+nav ul li:hover > ul {
+	display:block;
+	position:absolute;
+}
+
+nav ul li > ul li:hover > ul {
+	display:block;
+	position:absolute;
+	left:150px;
+	top:auto;
+	margin-top: -36px;
+	margin-left:-1px;
+}
+
+
+footer {
+	position: absolute;
+	bottom:0px;
+	height:35px;
+	line-height: 35px;
+	background: #000;
+	color:#999;
+	text-align: center;
+	width:100%;
+	display:block;
+	padding-left:50px;
+	font-size:80%;
+}
+
+.main {
+	padding:20px;
+}
+
+.alerte {
+	width:50em;
+	margin:1em auto;
+	max-width:90%;
+	background:#FFF;
+	padding:1em;
+	border-radius:3px;
+	border:1px solid #CCC;
+	box-shadow:0px 0px 30px #CCC;
+}
+
+.alerte.alerte-erreur {
+	border-color:#FCC;
+	box-shadow:0px 0px 30px #FCC;
+	background:#FFF9F9;
+	color:#B00;
+}
+
+.alerte.alerte-info {
+	border-color:#CDF;
+	box-shadow:0px 0px 30px #CDF;
+	background:#F9FBFF;
+	color:#039;
+}
+
+.alerte.alerte-success {
+	border-color:#CCF2CC;
+	box-shadow:0px 0px 30px #CCF2CC;
+	background:#F9FFF9;
+	color:#090;
+}
+
+.alerte.alerte-attention {
+	border-color:#FEC;
+	box-shadow:0px 0px 30px #FEC;
+	background:#FDFBF6;
+	color:#C80;
+}
+
+h2 {
+	text-align:center;
+	border-bottom:1px dotted #000;
+	margin:0px auto 1em;
+	width:90%;
+}
+
+table {
+	border:2px solid #000;
+	margin-top:2em;
+	margin-bottom:4em;
+}
+
+table.table-small, fieldset {
+	width:50%;
+	min-width:600px;
+	margin:2em auto 4em;
+}
+
+table td {
+	border:1px solid #BBB;
+}
+
+table th {
+	color:#FFF;
+	border:1px solid #000;
+	background:#000;
+}
+
+table td.actions, 
+table th.actions {
+	width:10%;
+	min-width: 150px;
+	text-align:center;
+}
+
+table td,
+table th {
+	padding:5px;
+}
+
+table tr.form td {
+	padding:0px !important;
+	height:20px !important;
+}
+
+table tr td.vide {
+	background:#DDD;
+}
+
+input, button, table td select, table td textarea {
+	margin:0px;
+	height:30px;
+	border:none;
+	font-size:1em;
+	display:inline-block;
+	resize:none;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+button {
+	background:none;
+}
+
+table td input, table td select, table td textarea {
+	width:100%;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+table tr.form td div {
+	padding-left:10px;
+	background:#EEE;
+	height:30px;
+	font-size:1em;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+table td textarea {
+	border-left:1px solid #FFF;
+	border-right:1px solid #FFF;
+}
+
+button img {
+	height:20px;
+	position:relative;
+	top:5px;
+	padding:0px 2px;
+}
+
+table td input:focus,
+table td textarea:focus {
+    outline: 0;
+}
+
+table td textarea:focus {
+	position:relative;
+	height:100px;
+	top:-1px;
+	margin-bottom:-70px;
+	border:1px solid #000;
+}
+
+table tr.vide td {
+	background:#FAA;
+	text-align:center;
+	font-style: italic;
+}
+
+table tr td.vide {
+	background:#EEE;
+}
+
+fieldset {
+	border:none;
+}
+
+fieldset label span {
+	display:inline-block;
+	width:170px;
+	border-bottom:1px dashed #000;
+	font-weight: bold;
+	margin-right:10px;
+	vertical-align: top;
+}
+
+fieldset label {
+	display:block;
+	margin-bottom:1.5em;
+	vertical-align: top;
+}
+
+fieldset select,
+fieldset input[type=text],
+fieldset input[type=number],
+fieldset textarea {
+	width:calc(100% - 200px);
+	padding:5px 10px;
+	border:1px solid #999;
+}
+
+form input[type=submit] {
+	width:100%;
+	background:#DDD;
+	border:1px solid #666;
+	padding:5px;
+	cursor:pointer;
+	line-height: inherit;
+}
+
+fieldset legend {
+	font-size:1.2em;
+	font-weight:bold;
+	padding-left:50px;
+	border-bottom:2px solid #000;
+	width:100%;
+	padding:5px;
+	margin:2em 0em 1em;
+}
+
+.form-hide {
+	display:none;
+}
+
+noscript {
+	height:100%;
+}
+
+noscript:before, noscript div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+noscript:before {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+	margin-left: -0.25em;
+}
+
+noscript div {
+	width:100%;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+}
+
+label div {
+	display: inline-block;
+}
+
+div.dispo, div.nondispo, div.degrade {
+	font-weight:bold;
+}
+
+div.dispo {
+	color:green;
+}
+
+div.nondispo {
+	color:red;
+}
+
+div.degrade {
+	color:orange;
+}
+
+table.table-center tr td {
+	text-align: center;
+}
+
+table td div.degrade,
+table td div.dispo {
+	display:inline-block;
+}
+
+div.search {
+	text-align:right;
+	margin-bottom:-10px;
+	margin-top:20px;
+}
+
+div.search input {
+	border:1px solid #999;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.ui-helper-hidden-accessible {
+	display:none;
+}
+
+.ui-autocomplete {
+	position: absolute;
+	cursor: default;
+}    
+
+.ui-menu {
+	overflow:auto;
+	max-height:10em;
+	list-style:none;
+	margin: 0;
+	display:block;
+	float: left;
+	background-color:#e9e9f9;
+	border: 1px solid #999;
+	box-shadow: 0px 0px 10px #999;
+}
+
+.ui-menu .ui-menu {
+
+
+}
+.ui-menu .ui-menu-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+    border-bottom:1px solid #DDD;
+}
+
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.1em .3em;
+	line-height:30px;
+	zoom:1;
+}
+
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-focus {
+	background:#c9c9f9;
+	cursor:pointer;
+}
+
+input.loading,
+.ui-autocomplete-input {
+	background-image:url(../images/actions/select.png);
+  	background-position: right 5px center;
+  	background-repeat:no-repeat;
+  	background-size:10px;
+}
+
+.ui-autocomplete-loading,
+input.loading {
+	background-image:url(../images/actions/wait.gif);
+	background-size:20px;
+}
+
+select.disabled, 
+input.disabled {
+	background-color:#EEE;
+	color:#555;
+}
+
+input[type=submit]:disabled {
+	color:#999;
+	cursor:inherit;
+}
+
+td.vide div { 
+	display:block;
+	overflow:auto;
+	width:100%;
+}

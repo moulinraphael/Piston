@@ -1,0 +1,20 @@
+/* *********************************************************/
+/* Produit Piston : Gestion Matos et Membres ***************/
+/* Créé par Raphaël Kichot' MOULIN *************************/
+/* raphael.moulin@ecl13.ec-lyon.fr *************************/
+/* *********************************************************/
+/* assets/css/print.css ************************************/
+/* *********************************************************/
+/* Dernière modification : le 06/11/14 *********************/
+/* *********************************************************/
+
+.noprint, .noprint * {
+	display:none !important;
+	width:0px;
+}
+
+body {
+	background:#FFF;
+	color:#000;
+	font-size:11px !important;
+}
